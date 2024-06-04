@@ -10,6 +10,5 @@ public class ApplicationDbContext : DbContext
     {
             Database.EnsureCreated();
     }
-
-    public DbSet<ProductModel> Products { get; set; }
+    public DbSet<EventsModel> Events { get; set; }
 }
