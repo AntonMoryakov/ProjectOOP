@@ -18,9 +18,4 @@ var NotesDb = builder.AddSqlServer("sqlserver")
 builder.AddProject<Projects.OOP_PROJECT_Server>("apiservice")
     .WithReference(NotesDb);
 
-builder.AddNpmApp("vue", "../oop_project.client")
-    .WithHttpsEndpoint(isProxied: true, env:"PORT")
-    .WithExternalHttpEndpoints()
-    .PublishAsDockerFile();
-
 builder.Build().Run();
