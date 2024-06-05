@@ -11,4 +11,6 @@ public class ApplicationDbContext : DbContext
             Database.EnsureCreated();
     }
     public DbSet<EventsModel> Events { get; set; }
+    public DbSet<UsersModel> Users { get; set; }
+
 }

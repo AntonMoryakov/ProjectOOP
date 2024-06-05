@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OOP_PROJECT.Server", "OOP_P
 EndProject
 Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "oop_project.client", "oop_project.client\oop_project.client.esproj", "{EC588757-23F9-417D-A70A-8327910149A9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOP_PROJECT.Aspire", "OOP_PROJECT.Aspire\OOP_PROJECT.Aspire.csproj", "{1746ECED-538E-4DA3-B036-E0958AC4F744}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OOP_PROJECT.Aspire", "OOP_PROJECT.Aspire\OOP_PROJECT.Aspire.csproj", "{1746ECED-538E-4DA3-B036-E0958AC4F744}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
