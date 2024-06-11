@@ -3,6 +3,7 @@ using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Configuration;
+using Microsoft.AspNetCore.Cors;
 using System.Net;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -62,6 +63,7 @@ if (builder.Environment.IsDevelopment())
         ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
     });
 }
+app.UseCors("AllowSpecificOrigin");
 
 app.UseHttpsRedirection();
 
