@@ -24,6 +24,16 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowSpecificOrigin",
+        policy => policy
+            .WithOrigins("http://localhost:5000", "http://localhost:3000") // Замените на нужные вам адреса
+            .AllowAnyMethod()
+            .AllowAnyHeader()
+            .AllowCredentials());
+});
+
 //Добавление доверенных прокси
 if (builder.Environment.IsDevelopment())
 {
