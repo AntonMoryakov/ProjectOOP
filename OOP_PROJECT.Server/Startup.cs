@@ -47,7 +47,7 @@ public class Startup
         {
             options.AddPolicy("AllowSpecificOrigin",
                 builder => builder
-                    .WithOrigins("http://example.com", "http://localhost:3000") // Замените на нужные вам адреса
+                    .WithOrigins("http://localhost:5000", "http://localhost:3000") // Замените на нужные вам адреса
                     .AllowAnyMethod()
                     .AllowAnyHeader()
                     .AllowCredentials());

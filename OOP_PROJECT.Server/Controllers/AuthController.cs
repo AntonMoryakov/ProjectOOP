@@ -33,7 +33,7 @@ namespace OOP_PROJECT.Server.Controllers
                 return Unauthorized();
 
             var tokenString = GenerateJwtToken(user);
-            return Ok(new { token = tokenString });
+            return Ok(new { token = tokenString, nick = user.UserNick });
         }
 
         private bool VerifyPassword(string enteredPassword, string storedPassword)
