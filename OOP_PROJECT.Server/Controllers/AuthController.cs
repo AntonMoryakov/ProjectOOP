@@ -29,8 +29,17 @@ namespace OOP_PROJECT.Server.Controllers
         {
             var user = await _context.Users.SingleOrDefaultAsync(u => u.Email == login.Email);
 
-            if (user == null || !VerifyPassword(login.Password, user.Password))
-                return Unauthorized();
+            if (user == null)
+            {
+                // Если пользователь не найден
+                return BadRequest(new { message = "Invalid email or password" });
+            }
+
+            if (!VerifyPassword(login.Password, user.Password))
+            {
+                // Если пароль неверен
+                return BadRequest(new { message = "Invalid email or password" });
+            }
 
             var tokenString = GenerateJwtToken(user);
             return Ok(new { token = tokenString, nick = user.UserNick });
